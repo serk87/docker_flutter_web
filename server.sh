@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /app
-
+flutter pub get
 flutter build web
 
 # Set the port

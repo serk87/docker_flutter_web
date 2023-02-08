@@ -33,3 +33,6 @@ EXPOSE 5000
 RUN ["chmod", "+x", "/server.sh"]
 
 ENTRYPOINT [ "/server.sh"]
+
+HEALTHCHECK --interval=30s --timeout=2m \
+  CMD curl -f http://localhost:5000 || exit 1
